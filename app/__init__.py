@@ -4,7 +4,8 @@
 import wtforms_json
 from pathlib import Path
 from flask import Flask
-from app import models, controllers
+
+from flask import jsonify
 
 # from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -36,7 +37,9 @@ db = SQLAlchemy(app)
 # Permet la gestion des migrations via Alembic
 migrate = Migrate(app, db)
 
-from app.models import user, message
+from app.models import *
+from app.controllers import *
+
 
 # from app.config.injector_config import config_injector
 # from app.framework.injector import Injector
