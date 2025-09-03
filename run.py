@@ -1,7 +1,8 @@
 import os
 from app import app
 
-raw_port = os.environ.get("PORT", "5432")
+
+raw_port = os.environ.get("PORT", "5000")
 
 try:
     port = int(raw_port)
