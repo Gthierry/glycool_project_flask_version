@@ -1,8 +1,8 @@
 from app.models.user import User
 from app.dtos.user_dto import User_dto
 from app.services.base_service import Base_service
-from app.forms.users.user_register_form import UserRegisterForm
-from bcrypt import bcrypt
+from app.forms.users.user_insert_form import user_insert_form
+import bcrypt
 from app import db
 
 
@@ -12,7 +12,7 @@ class User_service(Base_service):
         return [User_dto(u) for u in User.query.all()]
 
     @staticmethod
-    def create(form: UserRegisterForm):
+    def create(form: user_insert_form):
         salt = bcrypt.gensalt()
         user = User(
             user_first_name=form.first_name.data,

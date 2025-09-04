@@ -38,7 +38,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from app.models import user, message
-from app.controllers import *
+from app.controllers import user_controller
 
 
 # from app.config.injector_config import config_injector
