@@ -9,5 +9,5 @@ class User_dto:
         self.username = User.user_username
         self.first_name = User.user_first_name
         self.last_name = User.user_last_name
-        self.image_file = User.user_image_file
+        # self.image_file = User.user_image_file
         self.email = User.user_email

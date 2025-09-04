@@ -37,7 +37,7 @@ db = SQLAlchemy(app)
 # Permet la gestion des migrations via Alembic
 migrate = Migrate(app, db)
 
-from app.models import *
+from app.models import user, message
 from app.controllers import *
 
 
