@@ -1,7 +1,7 @@
 from app import app
 from flask import jsonify
 from app.services.user_service import User_service
-from app.forms.users.user_register_form import user_insert_form
+from app.forms.users.user_insert_form import User_insert_form
 
 from flask import request
 
@@ -15,10 +15,10 @@ def get_users():
 @app.post("/user/create")
 def create_user():
 
-    form = user_insert_form.from_json(request.json)
+    form = User_insert_form.from_json(request.json)
 
     if form.validate():
-        user = User_service.insert(form)
+        user = User_service.create(form)
 
         return jsonify(user.serialize())
 

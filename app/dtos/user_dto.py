@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from app.models.user import User
+from copy import deepcopy
 
 
 @dataclass
@@ -11,3 +12,9 @@ class User_dto:
         self.last_name = User.user_last_name
         # self.image_file = User.user_image_file
         self.email = User.user_email
+        self.role = User.user_role
+
+    def serialize(self):
+        dto = deepcopy(self)
+
+        return dto.__dict__

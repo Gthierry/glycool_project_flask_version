@@ -4,7 +4,7 @@ from wtforms.fields.choices import SelectMultipleField
 from wtforms.validators import DataRequired
 
 
-class UserInsertForm(FlaskForm):
+class User_insert_form(FlaskForm):
     class Meta:
         csrf = False
 
