@@ -14,6 +14,11 @@ class UserInsertForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired()])
     roles = SelectMultipleField(
         "Roles",
-        choices=[("admin", "Admin"), ("user", "User"), ("guest", "Guest")],
+        choices=[
+            ("admin", "Admin"),
+            ("user", "User"),
+            ("guest", "Guest"),
+            ("moderator", "Moderator"),
+        ],
         validators=[DataRequired()],
     )
