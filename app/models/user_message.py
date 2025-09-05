@@ -1,8 +1,7 @@
 from app import db
-from sqlalchemy import Identity
 
 
-class UserMessage(db.Model):
+class User_message(db.Model):
     __tablename__ = "user_messages"
 
     user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"), nullable=False)
