@@ -2,8 +2,9 @@ from app import app
 from flask import jsonify
 from app.services.user_service import User_service
 from app.forms.users.user_insert_form import User_insert_form
+from flask import render_template, request, redirect, url_for, flash
 
-from flask import request
+# from flask import request
 
 
 @app.get("/users")
